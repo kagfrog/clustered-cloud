@@ -1,5 +1,13 @@
 <template>
   <v-app>
+    <v-app-bar
+      app
+      elevate-on-scroll
+      color="#ffffff"
+      height="72"
+    >
+      <app-bar-content />
+    </v-app-bar>
     <v-content class="grey lighten-4">
       <router-view
         :install-prompt-event.sync="installPromptEvent"
@@ -31,7 +39,10 @@
         </v-btn>
       </v-snackbar>
     </v-content>
-    <v-footer class="justify-center caption">
+    <v-footer
+      app
+      class="justify-center caption"
+    >
       <div class="mb-1">
         <div class="d-inline">
           Copyright &copy; 2019, 2020 Clustered Cloud. All Rights Reserved.
@@ -51,9 +62,13 @@
 import format from 'date-fns/format';
 import removeHover from 'remove-hover';
 import { mdiClose } from '@mdi/js';
+import AppBarContent from '@/components/AppBarContent';
 
 export default {
   name: 'App',
+
+  components: { AppBarContent },
+
   data () {
     return {
       icons: { mdiClose },

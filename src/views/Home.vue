@@ -1,16 +1,5 @@
 <template>
-  <div>
-    <v-app-bar
-      app
-      dark
-      color="primary"
-    >
-      <v-app-bar-nav-icon />
-      <v-toolbar-title>
-        Clustered Cloud
-      </v-toolbar-title>
-    </v-app-bar>
-  </div>
+  <div />
 </template>
 
 <script>
