@@ -1,8 +1,8 @@
 module.exports = {
   pwa: {
     name: 'Clustered Cloud',
-    themeColor: '#084678',
-    msTileColor: '#084678',
+    themeColor: '#796eff',
+    msTileColor: '#796eff',
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black',
     iconPaths: {
