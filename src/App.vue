@@ -39,7 +39,8 @@
         </v-btn>
       </v-snackbar>
     </v-content>
-    <app-footer />
+    <footer-trial />
+    <footer-nav />
   </v-app>
 </template>
 
@@ -48,12 +49,13 @@ import format from 'date-fns/format';
 import removeHover from 'remove-hover';
 import { mdiClose } from '@mdi/js';
 import AppBarContent from '@/components/AppBarContent';
-import AppFooter from '@/components/AppFooter';
+import FooterNav from '@/components/FooterNav';
+import FooterTrial from '@/components/FooterTrial';
 
 export default {
   name: 'App',
 
-  components: { AppBarContent, AppFooter },
+  components: { AppBarContent, FooterNav, FooterTrial },
 
   data () {
     return {
