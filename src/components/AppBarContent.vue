@@ -10,18 +10,62 @@
       >
         Platform
       </v-btn>
-      <v-btn text>
-        Solutions
-      </v-btn>
+      <v-menu
+        open-on-hover
+        bottom
+        offset-y
+      >
+        <template v-slot:activator="{ on }">
+          <v-btn
+            text
+            v-on="on"
+          >
+            Solutions
+          </v-btn>
+        </template>
+        <v-list nav>
+          <v-list-item
+            v-for="(solution, index) in solutions"
+            :key="index"
+            :to="solution.to"
+          >
+            <v-list-item-title>
+              {{ solution.title }}
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
       <v-btn
         text
         to="/pricing"
       >
         Pricing
       </v-btn>
-      <v-btn text>
-        Resources
-      </v-btn>
+      <v-menu
+        open-on-hover
+        bottom
+        offset-y
+      >
+        <template v-slot:activator="{ on }">
+          <v-btn
+            text
+            v-on="on"
+          >
+            Resources
+          </v-btn>
+        </template>
+        <v-list nav>
+          <v-list-item
+            v-for="(resource, index) in resources"
+            :key="index"
+            :to="resource.to"
+          >
+            <v-list-item-title>
+              {{ resource.title }}
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </div>
     <v-spacer />
     <div>
@@ -43,7 +87,18 @@
 export default {
   data () {
     return {
-      //
+      resources: [
+        { title: 'Documentation', to: '/docs' },
+        { title: 'Help Center', to: '/help' },
+        { title: 'Webinars', to: '/webinars' },
+        { title: 'Blog', to: '/blog' },
+      ],
+      solutions: [
+        { title: 'Developers', to: '/solutions/for-developers' },
+        { title: 'SaaS and startups', to: '/solutions/saas' },
+        { title: 'Agencies', to: '/solutions/for-agencies' },
+        { title: 'Enterprise', to: '/solutions/enterprise' },
+      ],
     };
   },
 };
