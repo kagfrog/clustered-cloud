@@ -4,12 +4,22 @@
       <img src="../../public/img/svg/clustered.svg">
     </router-link>
     <div class="ml-12 hidden-sm-and-down">
-      <v-btn
-        text
-        to="/platform"
+      <v-menu
+        open-on-hover
+        bottom
+        offset-y
       >
-        Platform
-      </v-btn>
+        <template v-slot:activator="{ on }">
+          <v-btn
+            text
+            to="/platform"
+            v-on="on"
+          >
+            Platform
+          </v-btn>
+        </template>
+        <platform-menu />
+      </v-menu>
       <v-menu
         open-on-hover
         bottom
@@ -84,7 +94,12 @@
 </template>
 
 <script>
+import PlatformMenu from '@/components/PlatformMenu';
+
 export default {
+
+  components: { PlatformMenu },
+
   data () {
     return {
       resources: [

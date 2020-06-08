@@ -12,6 +12,16 @@ import ForDevelopers from '@/views/ForDevelopers';
 import Enterprise from '@/views/Enterprise';
 import ForAgencies from '@/views/ForAgencies';
 import Saas from '@/views/Saas';
+import Stacks from '@/views/Stacks';
+import Nodejs from '@/views/Nodejs';
+import Php from '@/views/Php';
+import Python from '@/views/Python';
+import Go from '@/views/Go';
+import Html from '@/views/Html';
+import Magneto from '@/views/Magneto';
+import Wordpress from '@/views/Wordpress';
+import Vuejs from '@/views/Vuejs';
+import Laravel from '@/views/Laravel';
 
 Vue.use(VueRouter);
 
@@ -82,6 +92,56 @@ export default new VueRouter({
       path: '/solutions/saas',
       name: 'saas',
       component: Saas,
+    },
+    {
+      path: '/stacks',
+      name: 'stacks',
+      component: Stacks,
+    },
+    {
+      path: '/stacks/nodejs',
+      name: 'nodejs',
+      component: Nodejs,
+    },
+    {
+      path: '/stacks/php',
+      name: 'php',
+      component: Php,
+    },
+    {
+      path: '/stacks/python',
+      name: 'python',
+      component: Python,
+    },
+    {
+      path: '/stacks/go',
+      name: 'go',
+      component: Go,
+    },
+    {
+      path: '/stacks/html',
+      name: 'html',
+      component: Html,
+    },
+    {
+      path: '/stacks/magneto',
+      name: 'magneto',
+      component: Magneto,
+    },
+    {
+      path: '/stacks/wordpress',
+      name: 'wordpress',
+      component: Wordpress,
+    },
+    {
+      path: '/stacks/vuejs',
+      name: 'vuejs',
+      component: Vuejs,
+    },
+    {
+      path: '/stacks/laravel',
+      name: 'laravel',
+      component: Laravel,
     },
   ],
 });
