@@ -1,6 +1,7 @@
 <template>
   <v-sheet
     dark
+    tile
     class="primary darken-1 diag-bg py-12"
     tag="section"
   >

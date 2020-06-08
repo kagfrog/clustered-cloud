@@ -22,6 +22,8 @@ import Magneto from '@/views/Magneto';
 import Wordpress from '@/views/Wordpress';
 import Vuejs from '@/views/Vuejs';
 import Laravel from '@/views/Laravel';
+import Privacy from '@/views/Privacy';
+import Tos from '@/views/Tos';
 
 Vue.use(VueRouter);
 
@@ -142,6 +144,16 @@ export default new VueRouter({
       path: '/stacks/laravel',
       name: 'laravel',
       component: Laravel,
+    },
+    {
+      path: '/legal/privacy',
+      name: 'privacy',
+      component: Privacy,
+    },
+    {
+      path: '/legal/tos',
+      name: 'tos',
+      component: Tos,
     },
   ],
 });
