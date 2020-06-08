@@ -45,14 +45,16 @@
               :key="lang"
               :to="lang.to"
             >
-              <v-list-item-icon class="align-center">
+              <v-list-item-avatar
+                class="align-center"
+                tile
+                size="24"
+              >
                 <v-img
                   :src="require(`../../public/img/svg/${lang.icon}`)"
                   contain
-                  height="30"
-                  width="30"
                 />
-              </v-list-item-icon>
+              </v-list-item-avatar>
               <v-list-item-title>
                 {{ lang.title }}
               </v-list-item-title>
@@ -76,14 +78,16 @@
               :key="type"
               :to="type.to"
             >
-              <v-list-item-icon class="align-center">
+              <v-list-item-avatar
+                class="align-center"
+                tile
+                size="24"
+              >
                 <v-img
                   :src="require(`../../public/img/svg/${type.icon}`)"
                   contain
-                  height="30"
-                  width="30"
                 />
-              </v-list-item-icon>
+              </v-list-item-avatar>
               <v-list-item-title>
                 {{ type.title }}
               </v-list-item-title>
