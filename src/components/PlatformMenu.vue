@@ -1,46 +1,94 @@
 <template>
-  <v-sheet>
-    <v-row>
+  <v-sheet
+    style="min-width: 700px; top: 54px; left: 219px;
+    transform-origin: left top; z-index: 8;"
+  >
+    <v-row class="flex-nowrap">
       <v-col class="col col-md-4 grey lighten-3">
-        <v-list nav>
-          <v-subheader>Clustered Cloud</v-subheader>
-          <v-list-item
-            v-for="(item, index) in items"
-            :key="index"
-            :to="item.to"
-          >
-            <v-list-item-title>
-              {{ item.title }}
-            </v-list-item-title>
-          </v-list-item>
+        <v-list
+          nav
+          class="transparent"
+        >
+          <template v-for="item in items">
+            <v-subheader
+              v-if="item.header"
+              :key="item.header"
+              class="font-weight-regular px-2 py-1 pb-3"
+              style="font-size: 18px;"
+              v-text="item.header"
+            />
+            <v-list-item
+              v-else
+              :key="item"
+              :to="item.to"
+            >
+              <v-list-item-title>
+                {{ item.title }}
+              </v-list-item-title>
+            </v-list-item>
+          </template>
         </v-list>
       </v-col>
       <v-col class="col">
-        <v-list nav>
-          <v-subheader>Languages</v-subheader>
-          <v-list-item
-            v-for="(lang, index) in languages"
-            :key="index"
-            :to="lang.to"
-          >
-            <v-list-item-title>
-              {{ lang.title }}
-            </v-list-item-title>
-          </v-list-item>
+        <v-list
+          dense
+          nav
+        >
+          <template v-for="lang in languages">
+            <v-subheader
+              v-if="lang.header"
+              :key="lang.header"
+              v-text="lang.header"
+            />
+            <v-list-item
+              v-else
+              :key="lang"
+              :to="lang.to"
+            >
+              <v-list-item-icon>
+                <v-img
+                  :src="require(`../../public/img/svg/${lang.icon}`)"
+                  contain
+                  height="30"
+                  width="30"
+                />
+              </v-list-item-icon>
+              <v-list-item-title>
+                {{ lang.title }}
+              </v-list-item-title>
+            </v-list-item>
+          </template>
         </v-list>
       </v-col>
       <v-col class="col">
-        <v-list nav>
-          <v-subheader>Apps and frameworks</v-subheader>
-          <v-list-item
-            v-for="(type, index) in appsAndFrameworks"
-            :key="index"
-            :to="type.to"
-          >
-            <v-list-item-title>
-              {{ type.title }}
-            </v-list-item-title>
-          </v-list-item>
+        <v-list
+          dense
+          nav
+        >
+          <template v-for="type in appsAndFrameworks">
+            <v-subheader
+              v-if="type.header"
+              :key="type.header"
+              v-text="type.header"
+            />
+            <v-list-item
+              v-else
+              :key="type"
+              :to="type.to"
+            >
+              <v-list-item-icon>
+                <v-img
+                  :src="require(`../../public/img/svg/${type.icon}`)"
+                  contain
+                  height="30"
+                  width="30"
+                />
+              </v-list-item-icon>
+              <v-list-item-title>
+                {{ type.title }}
+              </v-list-item-title>
+            </v-list-item>
+          </template>
         </v-list>
       </v-col>
     </v-row>
@@ -52,21 +100,25 @@ export default {
   data () {
     return {
       appsAndFrameworks: [
-        { title: 'Documentation', to: '/docs' },
-        { title: 'Help Center', to: '/help' },
-        { title: 'Webinars', to: '/webinars' },
-        { title: 'Blog', to: '/blog' },
+        { header: 'Apps and frameworks' },
+        { title: 'Magneto', to: '/stacks/magneto', icon: 'magneto.svg' },
+        { title: 'Wordpress', to: '/stacks/wordpress', icon: 'wordpress.svg' },
+        { title: 'Vue.js', to: '/stacks/vuejs', icon: 'vuejs.svg' },
+        { title: 'Laravel', to: '/stacks/laravel', icon: 'laravel.svg' },
       ],
       items: [
+        { header: 'Clustered Cloud' },
         { title: 'How it works', to: '/platform' },
         { title: 'Supported stacks', to: '/stacks' },
         { title: 'Addons', to: '/platform#services' },
       ],
       languages: [
-        { title: 'Documentation', to: '/docs' },
-        { title: 'Help Center', to: '/help' },
-        { title: 'Webinars', to: '/webinars' },
-        { title: 'Blog', to: '/blog' },
+        { header: 'Languages' },
+        { title: 'Node.js', to: '/stacks/nodejs', icon: 'nodejs.svg' },
+        { title: 'PHP', to: '/stacks/php', icon: 'php.svg' },
+        { title: 'Python', to: '/stacks/python', icon: 'python.svg' },
+        { title: 'Go', to: '/stacks/go', icon: 'golang.svg' },
+        { title: 'HTML/CSS/JS', to: '/stacks/html', icon: 'javascript.svg' },
       ],
     };
   },
