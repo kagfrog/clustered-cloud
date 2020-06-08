@@ -1,18 +1,26 @@
 <template>
   <v-container class="d-flex align-center py-0 container--fluid">
-    <img src="../../public/img/svg/clustered.svg">
+    <router-link to="/">
+      <img src="../../public/img/svg/clustered.svg">
+    </router-link>
     <div class="ml-12 hidden-sm-and-down">
-      <v-btn text>
-        Platform
-      </v-btn>
-      <v-btn text>
+      <v-btn
+        text
+        to="/platform"
+      >
         Platform
       </v-btn>
       <v-btn text>
         Solutions
       </v-btn>
-      <v-btn text>
+      <v-btn
+        text
+        to="/pricing"
+      >
         Pricing
+      </v-btn>
+      <v-btn text>
+        Resources
       </v-btn>
     </div>
     <v-spacer />
@@ -23,6 +31,7 @@
       <v-btn
         outlined
         color="primary"
+        to="/signup/trial"
       >
         Free Trial
       </v-btn>
