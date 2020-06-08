@@ -1,29 +1,31 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '@/views/Home';
-import Platform from '@/views/Platform';
-import Pricing from '@/views/Pricing';
-import Trial from '@/views/Trial';
-import Docs from '@/views/Docs';
-import Help from '@/views/Help';
 import Blog from '@/views/Blog';
-import Webinars from '@/views/Webinars';
-import ForDevelopers from '@/views/ForDevelopers';
+import Company from '@/views/Company';
+import Contact from '@/views/Contact';
+import Docs from '@/views/Docs';
 import Enterprise from '@/views/Enterprise';
 import ForAgencies from '@/views/ForAgencies';
-import Saas from '@/views/Saas';
-import Stacks from '@/views/Stacks';
+import ForDevelopers from '@/views/ForDevelopers';
+import Go from '@/views/Go';
+import Help from '@/views/Help';
+import Home from '@/views/Home';
+import Html from '@/views/Html';
+import Laravel from '@/views/Laravel';
+import Magento from '@/views/Magento';
 import Nodejs from '@/views/Nodejs';
 import Php from '@/views/Php';
-import Python from '@/views/Python';
-import Go from '@/views/Go';
-import Html from '@/views/Html';
-import Magento from '@/views/Magento';
-import Wordpress from '@/views/Wordpress';
-import Vuejs from '@/views/Vuejs';
-import Laravel from '@/views/Laravel';
+import Platform from '@/views/Platform';
+import Pricing from '@/views/Pricing';
 import Privacy from '@/views/Privacy';
+import Python from '@/views/Python';
+import Saas from '@/views/Saas';
+import Stacks from '@/views/Stacks';
 import Tos from '@/views/Tos';
+import Trial from '@/views/Trial';
+import Vuejs from '@/views/Vuejs';
+import Webinars from '@/views/Webinars';
+import Wordpress from '@/views/Wordpress';
 
 Vue.use(VueRouter);
 
@@ -154,6 +156,16 @@ export default new VueRouter({
       path: '/legal/tos',
       name: 'tos',
       component: Tos,
+    },
+    {
+      path: '/company',
+      name: 'company',
+      component: Company,
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact,
     },
   ],
 });
