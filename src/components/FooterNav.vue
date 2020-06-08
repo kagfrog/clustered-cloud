@@ -2,7 +2,7 @@
   <v-sheet
     dark
     tile
-    class="secondary"
+    class="secondary page-section pb-4"
     tag="section"
   >
     <v-container>
@@ -11,7 +11,7 @@
           <router-link to="/">
             <v-img
               src="../../public/img/svg/clustered-dark.svg"
-              class="my-2"
+              class="mb-4 mt-2"
               width="133"
             />
           </router-link>
@@ -212,5 +212,17 @@ export default {
 
 .light--text {
   color: #ffffffb3;
+}
+
+.page-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media only screen and (min-width: 960px) {
+  .page-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
 }
 </style>
