@@ -29,19 +29,29 @@
               </div>
               <ul class="nav-links body-2">
                 <li>
-                  <a href="/platform">Overview</a>
+                  <router-link to="/platform">
+                    Overview
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/platform#workflow">DevOps Automation</a>
+                  <router-link to="/platform#workflow">
+                    DevOps Automation
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/platform#containers">Container orchestration</a>
+                  <router-link to="/platform#containers">
+                    Container orchestration
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/platform#services">Service catalog</a>
+                  <router-link to="/platform#services">
+                    Service catalog
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/pricing">Pricing</a>
+                  <router-link to="/pricing">
+                    Pricing
+                  </router-link>
                 </li>
               </ul>
             </v-col>
@@ -51,16 +61,24 @@
               </div>
               <ul class="nav-links body-2">
                 <li>
-                  <a href="/stacks/magento">Scalable Magento clusters</a>
+                  <router-link to="/stacks/magento">
+                    Scalable Magento clusters
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/stacks/wordpress">Wordpress DevOps platform</a>
+                  <router-link to="/stacks/wordpress">
+                    Wordpress DevOps platform
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/#cloud-migration">Legacy app migration</a>
+                  <router-link to="/#cloud-migration">
+                    Legacy app migration
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/stacks">Polyglot microservices</a>
+                  <router-link to="/stacks">
+                    Polyglot microservices
+                  </router-link>
                 </li>
               </ul>
             </v-col>
@@ -70,16 +88,25 @@
               </div>
               <ul class="nav-links body-2">
                 <li>
-                  <a href="/docs">Developer Docs</a>
+                  <router-link to="/docs">
+                    Developer Docs
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/help">Help Center</a>
+                  <router-link to="/help">
+                    Help Center
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/webinars">Webinars</a>
+                  <a
+                    href="/webinars"
+                  >Webinars
+                  </a>
                 </li>
                 <li>
-                  <a href="/blog">Blog</a>
+                  <router-link to="/blog">
+                    Blog
+                  </router-link>
                 </li>
               </ul>
             </v-col>
@@ -89,10 +116,14 @@
               </div>
               <ul class="nav-links body-2">
                 <li>
-                  <a href="/company">About</a>
+                  <router-link to="/company">
+                    About
+                  </router-link>
                 </li>
                 <li>
-                  <a href="/contact">Contact</a>
+                  <router-link to="/contact">
+                    Contact
+                  </router-link>
                 </li>
               </ul>
             </v-col>
@@ -107,14 +138,14 @@
         >
           <ul class="caption links">
             <li>
-              <a href="/legal/tos">
+              <router-link to="/legal/tos">
                 Terms of Service
-              </a>
+              </router-link>
             </li>
             <li>
-              <a href="/legal/privacy">
+              <router-link to="/legal/privacy">
                 Privacy
-              </a>
+              </router-link>
             </li>
           </ul>
         </v-col>
