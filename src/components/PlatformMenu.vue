@@ -45,7 +45,7 @@
               :key="lang"
               :to="lang.to"
             >
-              <v-list-item-icon>
+              <v-list-item-icon class="align-center">
                 <v-img
                   :src="require(`../../public/img/svg/${lang.icon}`)"
                   contain
@@ -76,7 +76,7 @@
               :key="type"
               :to="type.to"
             >
-              <v-list-item-icon>
+              <v-list-item-icon class="align-center">
                 <v-img
                   :src="require(`../../public/img/svg/${type.icon}`)"
                   contain
