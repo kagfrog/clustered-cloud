@@ -39,22 +39,7 @@
         </v-btn>
       </v-snackbar>
     </v-content>
-    <v-footer
-      app
-      class="justify-center caption"
-    >
-      <div class="mb-1">
-        <div class="d-inline">
-          Copyright &copy; 2019, 2020 Clustered Cloud. All Rights Reserved.
-        </div>
-        <div class="mx-1 d-inline">
-          &vert; <a>Privacy</a> &vert;
-        </div>
-        <div class="d-inline">
-          <a>Terms of Use</a>
-        </div>
-      </div>
-    </v-footer>
+    <app-footer />
   </v-app>
 </template>
 
@@ -63,11 +48,12 @@ import format from 'date-fns/format';
 import removeHover from 'remove-hover';
 import { mdiClose } from '@mdi/js';
 import AppBarContent from '@/components/AppBarContent';
+import AppFooter from '@/components/AppFooter';
 
 export default {
   name: 'App',
 
-  components: { AppBarContent },
+  components: { AppBarContent, AppFooter },
 
   data () {
     return {
@@ -305,9 +291,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* Use sentence case for contained buttons as allowed by md2 spec. */
-.v-btn--contained {
+/* .v-btn--contained {
   text-transform: none;
-}
+} */
 
 /**
  * Ensures text field prefix/suffix text only displays when the input
