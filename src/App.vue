@@ -41,6 +41,7 @@
     </v-content>
     <footer-trial />
     <footer-nav />
+    <chat />
   </v-app>
 </template>
 
@@ -49,13 +50,16 @@ import format from 'date-fns/format';
 import removeHover from 'remove-hover';
 import { mdiClose } from '@mdi/js';
 import AppBarContent from '@/components/AppBarContent';
+import Chat from '@/components/Chat';
 import FooterNav from '@/components/FooterNav';
 import FooterTrial from '@/components/FooterTrial';
 
 export default {
   name: 'App',
 
-  components: { AppBarContent, FooterNav, FooterTrial },
+  components: {
+    AppBarContent, Chat, FooterNav, FooterTrial,
+  },
 
   data () {
     return {
