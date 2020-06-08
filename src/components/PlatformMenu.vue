@@ -105,7 +105,7 @@ export default {
     return {
       appsAndFrameworks: [
         { header: 'Apps and frameworks' },
-        { title: 'Magneto', to: '/stacks/magneto', icon: 'magneto.svg' },
+        { title: 'Magento', to: '/stacks/magento', icon: 'magento.svg' },
         { title: 'Wordpress', to: '/stacks/wordpress', icon: 'wordpress.svg' },
         { title: 'Vue.js', to: '/stacks/vuejs', icon: 'vuejs.svg' },
         { title: 'Laravel', to: '/stacks/laravel', icon: 'laravel.svg' },

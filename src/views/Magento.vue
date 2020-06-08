@@ -1,6 +1,6 @@
 <template>
   <div>
-    Magneto
+    Magento
   </div>
 </template>
 

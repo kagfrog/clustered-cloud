@@ -18,7 +18,7 @@ import Php from '@/views/Php';
 import Python from '@/views/Python';
 import Go from '@/views/Go';
 import Html from '@/views/Html';
-import Magneto from '@/views/Magneto';
+import Magento from '@/views/Magento';
 import Wordpress from '@/views/Wordpress';
 import Vuejs from '@/views/Vuejs';
 import Laravel from '@/views/Laravel';
@@ -126,9 +126,9 @@ export default new VueRouter({
       component: Html,
     },
     {
-      path: '/stacks/magneto',
-      name: 'magneto',
-      component: Magneto,
+      path: '/stacks/magento',
+      name: 'magento',
+      component: Magento,
     },
     {
       path: '/stacks/wordpress',
