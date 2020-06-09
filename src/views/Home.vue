@@ -1,16 +1,13 @@
 <template>
-  <div />
+  <hero />
 </template>
 
 <script>
-import {
-  mdiAccountCircle,
-  mdiArrowLeft,
-  mdiGrid,
-  mdiPencil,
-} from '@mdi/js';
+import Hero from '@/components/Hero';
 
 export default {
+  components: { Hero },
+
   props: {
     installPromptEvent: {
       type: Event,
@@ -31,26 +28,7 @@ export default {
   },
 
   data: () => ({
-    addFeature: '',
-    upstreamUrl: '',
-    broker: true,
-    carrier: true,
-    maintenanceProvider: true,
-    shipper: true,
-    visibilityProvider: true,
-    icons: {
-      mdiAccountCircle,
-      mdiArrowLeft,
-      mdiGrid,
-      mdiPencil,
-    },
   }),
-
-  computed: {
-    urlPreview () {
-      return `${this.upstreamUrl}${this.upstreamUrl ? '/' : ''}`;
-    },
-  },
 
   methods: {
     reloadApp () { window.location.reload(); },
@@ -88,26 +66,5 @@ export default {
 </script>
 
 <style scoped>
-.card-container {
-  display: grid;
-  grid-template-columns: 180px 48px 48px 48px 200px auto;
-  column-gap: 24px;
-}
 
-.row-top {
-  grid-template-rows: repeat(4, 40px);
-}
-
-.row-bottom {
-  grid-template-rows: 40px;
-}
-
-.card-titles {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.checkbox-col {
-  justify-self: end;
-}
 </style>
