@@ -1,5 +1,6 @@
 <template>
   <div>
+    <vue-headful title="End-to-end DevOps platform | Clustered Cloud" />
     <hero />
     <works />
   </div>

@@ -11,6 +11,9 @@ import vuetify from '@/plugins/vuetify';
 import router from '@/router';
 import '@/registerServiceWorker';
 import App from '@/App';
+import vueHeadful from 'vue-headful';
+
+Vue.component('vue-headful', vueHeadful);
 
 Vue.config.productionTip = false;
 
