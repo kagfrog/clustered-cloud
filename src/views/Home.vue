@@ -4,16 +4,21 @@
     <hero />
     <works />
     <scale />
+    <v-divider />
+    <run-app />
   </div>
 </template>
 
 <script>
 import Hero from '@/components/Hero';
+import RunApp from '@/components/RunApp';
 import Scale from '@/components/Scale';
 import Works from '@/components/Works';
 
 export default {
-  components: { Hero, Scale, Works },
+  components: {
+    Hero, RunApp, Scale, Works,
+  },
 
   props: {
     installPromptEvent: {
