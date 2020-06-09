@@ -32,6 +32,6 @@ export default {};
 
 <style scoped>
 .diag-bg {
-  background: linear-gradient(-45deg,#00000005,#00000014 40%,#0000 0,#0000);
+  background: linear-gradient(-45deg,#00000005,#00000014 40%,#00000000 0,#00000000);
 }
 </style>
