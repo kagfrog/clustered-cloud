@@ -213,16 +213,4 @@ export default {
 .light--text {
   color: #ffffffb3;
 }
-
-.page-section {
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-
-@media only screen and (min-width: 960px) {
-  .page-section {
-    padding-top: 72px;
-    padding-bottom: 72px;
-  }
-}
 </style>

@@ -349,4 +349,17 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 500;
   line-height: 1.75rem;
 }
+
+/* clustered-cloud custom page section style */
+.page-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media only screen and (min-width: 960px) {
+  .page-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
 </style>

@@ -267,18 +267,6 @@ export default {
 </script>
 
 <style scoped>
-.page-section {
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-
-@media only screen and (min-width: 960px) {
-  .page-section {
-    padding-top: 72px;
-    padding-bottom: 72px;
-  }
-}
-
 .tab-content {
   padding: 64px 40px 40px;
   position: relative;
