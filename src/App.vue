@@ -342,4 +342,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .theme--light.v-card > .v-card__text {
   color: #00000099;
 }
+
+/* clustered-cloud custom typography style */
+.subtitle-3 {
+  font-size: 1.125rem !important;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
 </style>

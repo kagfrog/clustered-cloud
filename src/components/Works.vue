@@ -37,6 +37,8 @@
               <v-tab-item
                 v-for="item in items"
                 :key="item.tab"
+                reverse-transition="fade-transition"
+                transition="fade-transition"
               >
                 <v-row class="flex-md-nowrap text-md-left">
                   <v-col
@@ -67,32 +69,73 @@
                         </v-icon>
                       </v-avatar>
                       <p class="subtitle-3 font-weight-regular mb-6">
-                        Work with the languages and frameworks you love.
-                        Version and track your code with built-in Git support.
-                        Facilitate collaboration with team projects.
-                        Create web apps, APIs, backend workers, microservices
-                        and more. Add databases, caching,
-                        search and other services with one click.
+                        {{ item.content }}
                       </p>
-                      <div class="mt-12 mb-6">
-                        <v-btn
-                          dark
-                          depressed
-                          to="/stacks"
-                        >
-                          Supported stacks
-                        </v-btn>
-                        <v-btn
-                          text
-                          class="ml-4"
-                          to="/docs"
-                        >
-                          Developer docs
-                          <v-icon right>
-                            {{ icons.mdiArrowRight }}
-                          </v-icon>
-                        </v-btn>
-                      </div>
+                      <template v-if="item.tab === 'develop'">
+                        <div class="mt-12 mb-6">
+                          <v-btn
+                            dark
+                            depressed
+                            to="/stacks"
+                          >
+                            Supported stacks
+                          </v-btn>
+                          <v-btn
+                            text
+                            class="ml-4"
+                            to="/docs"
+                          >
+                            Developer docs
+                            <v-icon right>
+                              {{ icons.mdiArrowRight }}
+                            </v-icon>
+                          </v-btn>
+                        </div>
+                      </template>
+                      <template v-if="item.tab === 'build'">
+                        <div class="title mb-1">
+                          <strong>Replaces tools such as</strong>
+                        </div>
+                        <p class="subtitle-3 font-weight-regular mb-6">
+                          CircleCI, GitLab, Jenkins, Travis CI, Buddy
+                        </p>
+                      </template>
+                      <template v-if="item.tab === 'package'">
+                        <p class="mt-8 subtitle-3 font-weight-regular mb-6">
+                          <router-link to="/platform#containers">
+                            Learn more about the benefits of containerization
+                          </router-link>
+                        </p>
+                      </template>
+                      <template v-if="item.tab === 'deploy'">
+                        <code class="typer d-block mt-8">
+                          <vue-typer :text="typerText" />
+                        </code>
+                      </template>
+                      <template v-if="item.tab === 'run'">
+                        <div class="title mb-1">
+                          <strong>A superior alternative to</strong>
+                        </div>
+                        <p class="subtitle-3 font-weight-regular mb-6">
+                          Bare-metal servers, AWS, Kubernetes, Heroku, Firebase
+                        </p>
+                      </template>
+                      <template v-if="item.tab === 'manage'">
+                        <div class="title mb-1">
+                          <strong>Get built-in features such as</strong>
+                        </div>
+                        <p class="subtitle-3 font-weight-regular mb-6">
+                          Revision history, easy rollback,
+                          runtime config management
+                        </p>
+                      </template>
+                      <template v-if="item.tab === 'scale'">
+                        <p class="subtitle-3 font-weight-regular mb-6">
+                          Scale each container individually and pay only for
+                          what you use for maximum flexibility and cost
+                          efficiency.
+                        </p>
+                      </template>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -106,6 +149,7 @@
 </template>
 
 <script>
+import { VueTyper } from 'vue-typer';
 import {
   mdiArrowRight,
   mdiCloud,
@@ -118,6 +162,8 @@ import {
 } from '@mdi/js';
 
 export default {
+  components: { VueTyper },
+
   data () {
     return {
       tab: null,
@@ -126,45 +172,94 @@ export default {
         {
           tab: 'develop',
           header: 'Build something great',
-          content: '',
           icon: mdiXml,
+          content: `
+            Work with the languages and frameworks you love.
+            Version and track your code with built-in Git support.
+            Facilitate collaboration with team projects.
+            Create web apps, APIs, backend workers, microservices
+            and more. Add databases, caching,
+            search and other services with one click.
+          `,
         },
         {
           tab: 'build',
           header: 'Optimize builds with integrated CI/CD pipeline',
-          content: '',
           icon: mdiCogs,
+          content: `
+            Create build triggers to automatically run a pipeline when
+            you make changes to your source code. Compile dependencies
+            and run preprocessing tasks without polluting your dev
+            environment with unnecessary build toolkits.
+            Supports popular package managers such as Composer and npm.
+          `,
         },
         {
           tab: 'package',
           header: 'Containerize your application with one click',
-          content: '',
           icon: mdiDocker,
+          content: `
+            Our DevOps platform automatically packages your application code
+            and runtime into optimized container images when new builds are
+            triggered. Dependencies are pinned to their exact versions to
+            guarantee environment-parity and 100% reproducible deploys.
+            Put an end to the "Works on my machine" syndrome.
+          `,
         },
         {
           tab: 'deploy',
           header: 'Put your deployments on autopilot',
-          content: '',
           icon: mdiRocket,
+          content: `
+            As modern developers we need to move fast, ship new features
+            and fix bugs – often many times per day. Without the right set
+            of processes in place you are constantly slowed down by tedious
+            deploy routines and the fear of breaking things. Clustered makes
+            life easier with Zero Downtime, atomic deployments driven by Git.
+          `,
         },
         {
           tab: 'run',
           header: 'Resilient cloud hosting built to scale',
-          content: '',
           icon: mdiCloud,
+          content: `
+            With Clustered Cloud you get production-ready hosting out of
+            the box. Each component of your application runs in an isolated
+            container, managed by our self-healing orchestration layer.
+            Run your apps on the same infrastructure that powers some of
+            the world's largest websites.
+          `,
         },
         {
           tab: 'manage',
           header: 'Be in control at all times',
-          content: '',
           icon: mdiViewDashboard,
+          content: `
+            Manage configurations for your apps and services across all
+            deployments within a unified interface. Easily clone environments,
+            create snapshots, view logs, run one-off admin tasks or debug
+            at runtime using the integrated web terminal. Limit permissions
+            through role-based access control.
+          `,
         },
         {
           tab: 'scale',
           header: 'Scale as you grow',
-          content: '',
           icon: mdiTune,
+          content: `
+            Add more resources when and where it is needed without
+            overspending or committing to long-term contracts.
+            Clustered Cloud offers instant horizontal and vertical scaling
+            for all your stateless and stateful apps. Don't lose sales and
+            frustrated customers because of overloaded servers.
+          `,
         },
+      ],
+      typerText: [
+        'git add new-file.js',
+        'git commit -m \'Add new file\'',
+        'git push origin master',
+        '[Deployed to https://my-awesome-app.appcluster.com]',
       ],
     };
   },
@@ -206,7 +301,7 @@ export default {
     width: 160px;
     height: 100%;
     display: block;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   .tab-content-headline {
@@ -226,5 +321,15 @@ export default {
   /* font-size: 132px; */
   bottom: -24px;
   right: -24px;
+}
+
+.typer {
+  background: #000000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+code >>> .vue-typer .custom.char {
+  color: #ffffff;
 }
 </style>
