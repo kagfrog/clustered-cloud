@@ -1,12 +1,16 @@
 <template>
-  <hero />
+  <div>
+    <hero />
+    <works />
+  </div>
 </template>
 
 <script>
 import Hero from '@/components/Hero';
+import Works from '@/components/Works';
 
 export default {
-  components: { Hero },
+  components: { Hero, Works },
 
   props: {
     installPromptEvent: {
