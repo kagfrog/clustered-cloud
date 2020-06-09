@@ -24,6 +24,7 @@
     "remove-hover": "^0.1.0",
     "roboto-fontface": "*",
     "vue": "^2.6.11",
+    "vue-headful": "^2.1.0",
     "vue-router": "^3.3.2",
     "vue-typer": "^1.2.0",
     "vuetify": "2.2.33"
