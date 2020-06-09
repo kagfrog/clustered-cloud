@@ -3,15 +3,17 @@
     <vue-headful title="End-to-end DevOps platform | Clustered Cloud" />
     <hero />
     <works />
+    <scale />
   </div>
 </template>
 
 <script>
 import Hero from '@/components/Hero';
+import Scale from '@/components/Scale';
 import Works from '@/components/Works';
 
 export default {
-  components: { Hero, Works },
+  components: { Hero, Scale, Works },
 
   props: {
     installPromptEvent: {
