@@ -133,7 +133,7 @@ export default {
   data () {
     return {
       icons: { mdiCheck, mdiCheckCircle, mdiGit },
-      imgInUse: GOLANG,
+      imgInUse: null,
       index: 0,
       items: [
         {
@@ -183,6 +183,8 @@ export default {
   },
 
   mounted () {
+    this.imgInUse = this.svgs[this.index];
+
     setInterval(() => {
       this.index = this.index === this.svgs.length - 1 ? 0 : this.index += 1;
       this.imgInUse = this.svgs[this.index];
