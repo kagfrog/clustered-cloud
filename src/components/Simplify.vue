@@ -47,9 +47,8 @@
               <v-icon class="accent--text">
                 {{ icons.mdiCheckCircle }}
               </v-icon>
-              <div>
-                {{ item.content }}
-              </div>
+              <!-- eslint-disable vue/no-v-html -->
+              <div v-html="item.content" />
             </li>
           </ul>
         </div>

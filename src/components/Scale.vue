@@ -22,86 +22,32 @@
         </v-col>
       </v-row>
       <v-row class="justify-space-between">
-        <v-col cols="auto">
+        <v-col
+          v-for="(item, i) in items"
+          :key="i"
+          cols="auto"
+        >
           <div class="benefit-box">
             <v-icon
               color="primary"
               size="64"
             >
-              {{ icons.mdiXml }}
+              {{ item.icon }}
             </v-icon>
             <h3 class="title my-4">
-              Build apps faster
+              {{ item.header }}
             </h3>
-            <p class="subtitle-1">
-              Use your favorite programming languages and frameworks,
-              or leverage <strong>pre-configured app templates</strong>
-              to kickstart your new project.
-            </p>
+            <!-- eslint-disable vue/no-v-html -->
+            <p
+              class="subtitle-1"
+              v-html="item.content"
+            />
             <v-btn
               text
               color="primary"
-              to="/stacks"
+              :to="item.path"
             >
-              Supported stacks
-              <v-icon right>
-                {{ icons.mdiArrowRight }}
-              </v-icon>
-            </v-btn>
-          </div>
-        </v-col>
-
-        <v-col cols="auto">
-          <div class="benefit-box">
-            <v-icon
-              color="primary"
-              size="64"
-            >
-              {{ icons.mdiRocket }}
-            </v-icon>
-            <h3 class="title my-4">
-              Deploy with confidence, every time
-            </h3>
-            <p class="subtitle-1">
-              Iterate faster with <strong>continuous integration and
-                delivery</strong>. Deploy stateful and stateless apps
-              in seconds with simple Git commands.
-            </p>
-            <v-btn
-              text
-              color="primary"
-              to="/platform#rollouts"
-            >
-              Learn more
-              <v-icon right>
-                {{ icons.mdiArrowRight }}
-              </v-icon>
-            </v-btn>
-          </div>
-        </v-col>
-
-        <v-col cols="auto">
-          <div class="benefit-box">
-            <v-icon
-              color="primary"
-              size="64"
-            >
-              {{ icons.mdiTune }}
-            </v-icon>
-            <h3 class="title my-4">
-              Zero-touch infrastructure
-            </h3>
-            <p class="subtitle-1">
-              Spend your time <strong>building great apps</strong>, not
-              babysitting servers. Let Clustered Cloud automate your
-              infrastructure management.
-            </p>
-            <v-btn
-              text
-              color="primary"
-              to="/platform"
-            >
-              Explore platform
+              {{ item.button }}
               <v-icon right>
                 {{ icons.mdiArrowRight }}
               </v-icon>
@@ -124,12 +70,42 @@ import {
 export default {
   data () {
     return {
-      icons: {
-        mdiArrowRight,
-        mdiRocket,
-        mdiTune,
-        mdiXml,
-      },
+      icons: { mdiArrowRight },
+      items: [
+        {
+          icon: mdiXml,
+          header: 'Build apps faster',
+          button: 'Supported stacks',
+          path: '/stacks',
+          content: `
+            Use your favorite programming languages and frameworks,
+            or leverage <strong>pre-configured app templates</strong>
+            to kickstart your new project.
+          `,
+        },
+        {
+          icon: mdiRocket,
+          header: 'Deploy with confidence, every time',
+          button: 'Learn more',
+          path: '/platform#rollouts',
+          content: `
+            Iterate faster with <strong>continuous integration and
+            delivery</strong>. Deploy stateful and stateless apps
+            in seconds with simple Git commands.
+          `,
+        },
+        {
+          icon: mdiTune,
+          header: 'Zero-touch infrastructure',
+          button: 'Explore platform',
+          path: '/platform',
+          content: `
+            Spend your time <strong>building great apps</strong>, not
+            babysitting servers. Let Clustered Cloud automate your
+            infrastructure management.
+          `,
+        },
+      ],
     };
   },
 };

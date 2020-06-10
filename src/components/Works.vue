@@ -69,9 +69,11 @@
                           {{ item.icon }}
                         </v-icon>
                       </v-avatar>
-                      <p class="subtitle-3 font-weight-regular mb-6">
-                        {{ item.content }}
-                      </p>
+                      <!-- eslint-disable vue/no-v-html -->
+                      <p
+                        class="subtitle-3 font-weight-regular mb-6"
+                        v-html="item.content"
+                      />
                       <template v-if="item.tab === 'develop'">
                         <div class="mt-12 mb-6">
                           <v-btn
@@ -200,8 +202,8 @@ export default {
           header: 'Containerize your application with one click',
           icon: mdiDocker,
           content: `
-            Our DevOps platform automatically packages your application code
-            and runtime into optimized container images when new builds are
+            Our DevOps platform <em>automatically</em> packages your application
+            code and runtime into optimized container images when new builds are
             triggered. Dependencies are pinned to their exact versions to
             guarantee environment-parity and 100% reproducible deploys.
             Put an end to the "Works on my machine" syndrome.
@@ -251,8 +253,8 @@ export default {
             Add more resources when and where it is needed without
             overspending or committing to long-term contracts.
             Clustered Cloud offers instant horizontal and vertical scaling
-            for all your stateless and stateful apps. Don't lose sales and
-            frustrated customers because of overloaded servers.
+            for all your stateless <em>and</em> stateful apps. Don't lose
+            sales and frustrated customers because of overloaded servers.
           `,
         },
       ],

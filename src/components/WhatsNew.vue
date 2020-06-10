@@ -59,7 +59,7 @@
           </v-col>
           <v-divider
             v-if="item.divider"
-            :key="i"
+            :key="i+99"
             vertical
             class="hidden-sm-and-down"
           />

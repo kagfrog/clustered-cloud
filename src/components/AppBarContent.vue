@@ -79,7 +79,10 @@
     </div>
     <v-spacer />
     <div>
-      <v-btn text>
+      <v-btn
+        text
+        class="mr-4"
+      >
         Go to console
       </v-btn>
       <v-btn
