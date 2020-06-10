@@ -57,7 +57,6 @@
             <v-timeline-item
               fill-dot
               large
-              class="mb-12"
               color="#ffffff"
             >
               <template v-slot:icon>
