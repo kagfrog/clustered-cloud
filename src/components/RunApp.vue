@@ -2,6 +2,7 @@
   <v-sheet
     class="page-section"
     tile
+    tag="section"
   >
     <v-container>
       <v-row class="align-center justify-space-between">
@@ -10,12 +11,12 @@
           md="6"
         >
           <div class="text-center text-md-left">
-            <div class="body-1 mb-4 font-weight-light">
+            <h5 class="body-1 mb-4 font-weight-light">
               End-to-end application lifecycle management
-            </div>
-            <div class="display-1 font-weight-medium mb-6">
+            </h5>
+            <h3 class="display-1 font-weight-medium mb-6">
               Run your application as-is
-            </div>
+            </h3>
             <p class="title font-weight-regular mb-6">
               Our platform <strong>automatically</strong> packages and
               deploys your code and its dependencies as self-contained

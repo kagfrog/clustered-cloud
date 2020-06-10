@@ -2,6 +2,7 @@
   <v-sheet
     class="hero"
     tile
+    tag="section"
   >
     <v-container>
       <v-row class="align-center justify-space-between">

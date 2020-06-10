@@ -2,6 +2,7 @@
   <v-sheet
     class="page-section"
     tile
+    tag="section"
   >
     <v-container>
       <v-row class="align-center justify-space-between">
@@ -84,12 +85,12 @@
           md="6"
         >
           <div class="text-center text-md-left">
-            <div class="body-1 mb-4 font-weight-light">
+            <h5 class="body-1 mb-4 font-weight-light">
               Automate your workflow
-            </div>
-            <div class="display-1 font-weight-medium mb-6">
+            </h5>
+            <h3 class="display-1 font-weight-medium mb-6">
               Ship code faster and more reliably
-            </div>
+            </h3>
             <p class="title font-weight-regular mb-6">
               The old way of deploying software is <strong>slow</strong>
               and <strong>brittle</strong>.

@@ -24,9 +24,9 @@
         <v-col class="flex-grow-1 col-md-auto col-12">
           <v-row class="justify-space-between">
             <v-col class="col-sm-auto col-12">
-              <div class="body-2 font-weight-bold mb-2">
+              <h5 class="body-2 font-weight-bold mb-2">
                 PLATFORM
-              </div>
+              </h5>
               <ul class="nav-links body-2">
                 <li>
                   <router-link to="/platform">
@@ -56,9 +56,9 @@
               </ul>
             </v-col>
             <v-col class="col-sm-auto col-12">
-              <div class="body-2 font-weight-bold mb-2">
+              <h5 class="body-2 font-weight-bold mb-2">
                 USE CASES
-              </div>
+              </h5>
               <ul class="nav-links body-2">
                 <li>
                   <router-link to="/stacks/magento">
@@ -83,9 +83,9 @@
               </ul>
             </v-col>
             <v-col class="col-sm-auto col-6">
-              <div class="body-2 font-weight-bold mb-2">
+              <h5 class="body-2 font-weight-bold mb-2">
                 RESOURCES
-              </div>
+              </h5>
               <ul class="nav-links body-2">
                 <li>
                   <router-link to="/docs">
@@ -111,9 +111,9 @@
               </ul>
             </v-col>
             <v-col class="col-sm-auto col-6">
-              <div class="body-2 font-weight-bold mb-2">
+              <h5 class="body-2 font-weight-bold mb-2">
                 COMPANY
-              </div>
+              </h5>
               <ul class="nav-links body-2">
                 <li>
                   <router-link to="/company">

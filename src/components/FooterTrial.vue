@@ -6,9 +6,9 @@
     tag="section"
   >
     <v-container class="text-center">
-      <div class="display-1 font-weight-medium mb-6">
+      <h4 class="display-1 font-weight-medium mb-6">
         Free 14-day trial
-      </div>
+      </h4>
       <p class="subtitle-1">
         Try Clustered Cloud completely free! Sign up now to get started.
       </p>

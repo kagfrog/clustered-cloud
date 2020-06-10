@@ -2,12 +2,13 @@
   <v-sheet
     class="page-section"
     tile
+    tag="section"
   >
     <v-container>
       <div class="centered-block">
-        <div class="display-1 font-weight-medium mb-6">
+        <h2 class="display-1 font-weight-medium mb-6">
           A unified workflow for your app lifecycle
-        </div>
+        </h2>
         <p class="mb-12 title font-weight-regular mb-6">
           Simplify your toolchain and get more done with our end-to-end
           DevOps platform
@@ -28,9 +29,9 @@
               </v-icon>
             </v-list-item-avatar>
             <v-list-item-content class="py-0">
-              <div class="subtitle-3 font-weight-regular mb-1">
+              <h4 class="subtitle-3 font-weight-regular mb-1">
                 {{ item.header }}
-              </div>
+              </h4>
               <div class="body-1">
                 {{ item.content }}
               </div>

@@ -2,6 +2,7 @@
   <v-sheet
     class="page-section blue-grey lighten-5"
     tile
+    tag="section"
   >
     <v-container>
       <v-row class="justify-center">
@@ -45,11 +46,11 @@
                     cols="12"
                     md="5"
                   >
-                    <div
+                    <h3
                       class="tab-content-headline display-1 font-weight-bold"
                     >
                       {{ item.header }}
-                    </div>
+                    </h3>
                   </v-col>
                   <v-col
                     cols="12"

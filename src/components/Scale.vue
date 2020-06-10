@@ -2,6 +2,7 @@
   <v-sheet
     class="page-section"
     tile
+    tag="section"
   >
     <v-container>
       <v-row>
@@ -10,9 +11,9 @@
             <div class="body-1 mb-4 font-weight-light">
               Move faster from idea to cloud
             </div>
-            <div class="display-1 font-weight-medium mb-6">
+            <h3 class="display-1 font-weight-medium mb-6">
               A better way to build and scale apps
-            </div>
+            </h3>
             <p class="title font-weight-regular mb-6">
               Clustered Cloud combines DevOps automation with enterprise
               container hosting in a complete end-to-end platform.
@@ -29,9 +30,9 @@
             >
               {{ icons.mdiXml }}
             </v-icon>
-            <div class="title my-4">
+            <h3 class="title my-4">
               Build apps faster
-            </div>
+            </h3>
             <p class="subtitle-1">
               Use your favorite programming languages and frameworks,
               or leverage <strong>pre-configured app templates</strong>
@@ -58,9 +59,9 @@
             >
               {{ icons.mdiRocket }}
             </v-icon>
-            <div class="title my-4">
+            <h3 class="title my-4">
               Deploy with confidence, every time
-            </div>
+            </h3>
             <p class="subtitle-1">
               Iterate faster with <strong>continuous integration and
                 delivery</strong>. Deploy stateful and stateless apps
@@ -87,9 +88,9 @@
             >
               {{ icons.mdiTune }}
             </v-icon>
-            <div class="title my-4">
+            <h3 class="title my-4">
               Zero-touch infrastructure
-            </div>
+            </h3>
             <p class="subtitle-1">
               Spend your time <strong>building great apps</strong>, not
               babysitting servers. Let Clustered Cloud automate your

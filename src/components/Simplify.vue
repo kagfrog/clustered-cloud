@@ -2,6 +2,7 @@
   <v-sheet
     class="page-section"
     tile
+    tag="section"
   >
     <v-container>
       <!-- eslint-disable max-len -->
@@ -18,15 +19,15 @@
           />
         </v-col>
         <div class="text-center text-md-left col-md-6 col-12">
-          <div
+          <h5
             id="cloud-migration"
             class="body-1 mb-4 font-weight-light"
           >
             Remove cloud barriers
-          </div>
-          <div class="display-1 font-weight-medium mb-6">
+          </h5>
+          <h3 class="display-1 font-weight-medium mb-6">
             Simplify migration to the cloud
-          </div>
+          </h3>
           <p class="title font-weight-regular mb-6">
             Unfortunately, most applications were not built to be
             <a
