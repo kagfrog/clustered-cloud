@@ -19,6 +19,7 @@
             sm="auto"
           >
             <v-card
+              :ripple="false"
               :to="item.path"
               flat
               class="newsbox"
@@ -122,7 +123,9 @@ export default {
 </script>
 
 <style scoped>
-.nudge-icon:hover .v-icon {
+/* This is very cool! Hovering over a card affects translate on button icon! */
+/* Actually, via another ruleset, it also scales the top image icon by 1.02. */
+.newsbox:hover .nudge-icon .v-icon {
   transform: translateX(4px);
 }
 
@@ -156,6 +159,10 @@ export default {
 
 .newsbox:hover .newsbox-headline {
   opacity: 0.7;
+}
+
+.newsbox:hover .post-image__inner {
+  transform: scale(1.02);
 }
 
 .newsbox-text {
