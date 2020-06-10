@@ -9,9 +9,9 @@
     <v-divider />
     <automate />
     <v-divider />
-    <simplify />
-    <v-divider />
     <start-small />
+    <v-divider />
+    <simplify />
     <v-divider />
     <unified />
     <v-divider />
