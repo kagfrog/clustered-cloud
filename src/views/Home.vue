@@ -6,18 +6,41 @@
     <scale />
     <v-divider />
     <run-app />
+    <v-divider />
+    <automate />
+    <v-divider />
+    <simplify />
+    <v-divider />
+    <start-small />
+    <v-divider />
+    <unified />
+    <v-divider />
+    <whats-new />
   </div>
 </template>
 
 <script>
+import Automate from '@/components/Automate';
 import Hero from '@/components/Hero';
 import RunApp from '@/components/RunApp';
 import Scale from '@/components/Scale';
+import Simplify from '@/components/Simplify';
+import StartSmall from '@/components/StartSmall';
+import Unified from '@/components/Unified';
+import WhatsNew from '@/components/WhatsNew';
 import Works from '@/components/Works';
 
 export default {
   components: {
-    Hero, RunApp, Scale, Works,
+    Automate,
+    Hero,
+    RunApp,
+    Scale,
+    Simplify,
+    StartSmall,
+    Unified,
+    WhatsNew,
+    Works,
   },
 
   props: {
