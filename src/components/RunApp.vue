@@ -70,7 +70,7 @@
           <v-img
             class="mx-auto"
             max-width="400"
-            src="../../public/img/svg/tech-stacks.svg"
+            :src="require('../../public/img/svg/tech-stacks.svg')"
           />
         </v-col>
       </v-row>

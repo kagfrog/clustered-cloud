@@ -18,7 +18,7 @@
               slot="icon"
               size="40"
             >
-              <v-img src="../../public/img/svg/producthunt.svg" />
+              <v-img :src="require('../../public/img/svg/producthunt.svg')" />
             </v-avatar>
             Thank you for supporting us on Product Hunt!
             Sign up to claim your special deal 😊

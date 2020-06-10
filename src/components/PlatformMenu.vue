@@ -12,14 +12,14 @@
           <template v-for="item in items">
             <v-subheader
               v-if="item.header"
-              :key="item.header"
+              :key="item.to"
               class="font-weight-regular px-2 py-1 pb-3"
               style="font-size: 18px;"
               v-text="item.header"
             />
             <v-list-item
               v-else
-              :key="item"
+              :key="item.to"
               :to="item.to"
             >
               <v-list-item-title>
@@ -37,12 +37,12 @@
           <template v-for="lang in languages">
             <v-subheader
               v-if="lang.header"
-              :key="lang.header"
+              :key="lang.to"
               v-text="lang.header"
             />
             <v-list-item
               v-else
-              :key="lang"
+              :key="lang.to"
               :to="lang.to"
             >
               <v-list-item-avatar
@@ -70,12 +70,12 @@
           <template v-for="type in appsAndFrameworks">
             <v-subheader
               v-if="type.header"
-              :key="type.header"
+              :key="type.to"
               v-text="type.header"
             />
             <v-list-item
               v-else
-              :key="type"
+              :key="type.to"
               :to="type.to"
             >
               <v-list-item-avatar

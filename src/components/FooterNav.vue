@@ -10,7 +10,7 @@
         <v-col class="col-md-3 col-lg-4 col-12">
           <router-link to="/">
             <v-img
-              src="../../public/img/svg/clustered-dark.svg"
+              :src="require('../../public/img/svg/clustered-dark.svg')"
               class="mb-4 mt-2"
               width="133"
             />

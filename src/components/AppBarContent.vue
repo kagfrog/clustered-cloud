@@ -1,7 +1,7 @@
 <template>
   <v-container class="d-flex align-center py-0 container--fluid">
     <router-link to="/">
-      <img src="../../public/img/svg/clustered.svg">
+      <img :src="require('../../public/img/svg/clustered.svg')">
     </router-link>
     <div class="ml-12 hidden-sm-and-down">
       <v-menu
