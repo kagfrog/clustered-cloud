@@ -17,7 +17,7 @@
                 ? 'display-2'
                 : 'display-1'
               "
-              class="display-2 font-weight-medium mb-6"
+              class="font-weight-medium mb-6"
             >
               How it works
             </h2>
