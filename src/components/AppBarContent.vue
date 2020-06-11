@@ -1,5 +1,8 @@
 <template>
-  <v-container class="d-flex align-center py-0 container--fluid">
+  <v-container
+    fluid
+    class="d-flex align-center py-0"
+  >
     <router-link to="/">
       <img :src="require('../../public/img/svg/clustered.svg')">
     </router-link>
@@ -125,5 +128,10 @@ export default {
 <style scoped>
 .v-btn {
   text-transform: none;
+}
+
+/* Override placed here because App.vue @media rules fight with vuetify. */
+.container--fluid {
+  max-width: 100% !important;
 }
 </style>
