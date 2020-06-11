@@ -8,13 +8,25 @@
       <v-row>
         <v-col cols="12">
           <div class="centered-block">
-            <div class="body-1 mb-4 font-weight-light">
+            <h5 class="body-1 mb-4 font-weight-light">
               Move faster from idea to cloud
-            </div>
-            <h3 class="display-1 font-weight-medium mb-6">
+            </h5>
+            <h3
+              :class="$vuetify.breakpoint.mdAndUp
+                ? 'display-1'
+                : 'headline'
+              "
+              class="font-weight-medium mb-6"
+            >
               A better way to build and scale apps
             </h3>
-            <p class="title font-weight-regular mb-6">
+            <p
+              :class="$vuetify.breakpoint.mdAndUp
+                ? 'title'
+                : 'subtitle-3'
+              "
+              class="font-weight-regular mb-6"
+            >
               Clustered Cloud combines DevOps automation with enterprise
               container hosting in a complete end-to-end platform.
             </p>
