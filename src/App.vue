@@ -1,5 +1,13 @@
 <template>
   <v-app>
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      right
+      width="100%"
+    >
+      <drawer-content :menu.sync="drawer" />
+    </v-navigation-drawer>
     <v-app-bar
       app
       elevate-on-scroll
@@ -7,6 +15,16 @@
       height="72"
     >
       <app-bar-content />
+      <v-btn
+        v-if="$vuetify.breakpoint.smAndDown"
+        icon
+        x-large
+        @click="drawer = !drawer"
+      >
+        <v-icon size="32">
+          {{ icons.mdiMenu }}
+        </v-icon>
+      </v-btn>
     </v-app-bar>
     <v-content class="grey lighten-4">
       <router-view
@@ -48,9 +66,10 @@
 <script>
 import format from 'date-fns/format';
 import removeHover from 'remove-hover';
-import { mdiClose } from '@mdi/js';
+import { mdiClose, mdiMenu } from '@mdi/js';
 import AppBarContent from '@/components/AppBarContent';
 import Chat from '@/components/Chat';
+import DrawerContent from '@/components/DrawerContent';
 import FooterNav from '@/components/FooterNav';
 import FooterTrial from '@/components/FooterTrial';
 
@@ -58,12 +77,17 @@ export default {
   name: 'App',
 
   components: {
-    AppBarContent, Chat, FooterNav, FooterTrial,
+    AppBarContent,
+    Chat,
+    DrawerContent,
+    FooterNav,
+    FooterTrial,
   },
 
   data () {
     return {
-      icons: { mdiClose },
+      drawer: false,
+      icons: { mdiClose, mdiMenu },
       installPromptEvent: null,
       isActiveTouchDevice: false,
       refreshing: false,
@@ -382,4 +406,8 @@ input[type="number"]::-webkit-inner-spin-button {
     max-width: 1264px !important;
   }
 }
+</style>
+
+<style scoped>
+
 </style>

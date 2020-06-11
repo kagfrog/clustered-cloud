@@ -83,12 +83,14 @@
     <v-spacer />
     <div>
       <v-btn
+        v-if="$vuetify.breakpoint.mdAndUp"
         text
         class="mr-4"
       >
         Go to console
       </v-btn>
       <v-btn
+        v-if="$vuetify.breakpoint.mdAndUp"
         outlined
         color="primary"
         to="/signup/trial"
