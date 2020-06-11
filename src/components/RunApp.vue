@@ -14,10 +14,22 @@
             <h5 class="body-1 mb-4 font-weight-light">
               End-to-end application lifecycle management
             </h5>
-            <h3 class="display-1 font-weight-medium mb-6">
+            <h3
+              :class="$vuetify.breakpoint.mdAndUp
+                ? 'display-1'
+                : 'headline'
+              "
+              class="font-weight-medium mb-6"
+            >
               Run your application as-is
             </h3>
-            <p class="title font-weight-regular mb-6">
+            <p
+              :class="$vuetify.breakpoint.mdAndUp
+                ? 'title'
+                : 'subtitle-3'
+              "
+              class="font-weight-regular mb-6"
+            >
               Our platform <strong>automatically</strong> packages and
               deploys your code and its dependencies as self-contained
               microservices that are easy to manage and scale.
