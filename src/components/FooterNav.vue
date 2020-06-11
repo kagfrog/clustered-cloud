@@ -1,5 +1,6 @@
 <template>
   <v-sheet
+    :class="{'pt-4': $vuetify.breakpoint.smAndDown}"
     dark
     tile
     class="secondary page-section pb-4"
@@ -10,9 +11,12 @@
         <v-col class="col-md-3 col-lg-4 col-12">
           <router-link to="/">
             <v-img
-              :src="require('../../public/img/svg/clustered-dark.svg')"
+              :src="$vuetify.breakpoint.smAndDown
+                ? require('../../public/img/svg/clustered-mini.svg')
+                : require('../../public/img/svg/clustered-dark.svg')
+              "
+              :width="$vuetify.breakpoint.smAndDown ? 28 : 133"
               class="mb-4 mt-2"
-              width="133"
             />
           </router-link>
           <p class="subtitle-2 light--text hidden-sm-and-down">

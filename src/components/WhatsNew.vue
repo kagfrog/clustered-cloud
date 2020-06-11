@@ -5,7 +5,13 @@
     tag="section"
   >
     <v-container>
-      <h3 class="text-center display-2 font-weight-medium mb-6">
+      <h3
+        :class="$vuetify.breakpoint.mdAndUp
+          ? 'display-2'
+          : 'display-1'
+        "
+        class="text-center font-weight-medium mb-6"
+      >
         What's new
       </h3>
       <v-row class="py-12 flex-md-nowrap justify-md-space-around">

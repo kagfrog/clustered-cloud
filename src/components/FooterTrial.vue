@@ -6,13 +6,20 @@
     tag="section"
   >
     <v-container class="text-center">
-      <h4 class="display-1 font-weight-medium mb-6">
+      <h4
+        :class="$vuetify.breakpoint.mdAndUp
+          ? 'display-1'
+          : 'headline'
+        "
+        class="font-weight-medium mb-6"
+      >
         Free 14-day trial
       </h4>
       <p class="subtitle-1">
         Try Clustered Cloud completely free! Sign up now to get started.
       </p>
       <v-btn
+        :block="$vuetify.breakpoint.xs"
         large
         light
         class="mt-4"

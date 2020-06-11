@@ -6,10 +6,22 @@
   >
     <v-container>
       <div class="centered-block">
-        <h2 class="display-1 font-weight-medium mb-6">
+        <h2
+          :class="$vuetify.breakpoint.mdAndUp
+            ? 'display-1'
+            : 'headline'
+          "
+          class="font-weight-medium mb-6"
+        >
           A unified workflow for your app lifecycle
         </h2>
-        <p class="mb-12 title font-weight-regular mb-6">
+        <p
+          :class="$vuetify.breakpoint.mdAndUp
+            ? 'title'
+            : 'subtitle-3'
+          "
+          class="mb-12 font-weight-regular mb-6"
+        >
           Simplify your toolchain and get more done with our end-to-end
           DevOps platform
         </p>
