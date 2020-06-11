@@ -18,17 +18,33 @@
             max-width="400"
           />
         </v-col>
-        <div class="text-center text-md-left col-md-6 col-12">
+        <v-col
+          class="text-center text-md-left"
+          cols="12"
+          md="6"
+        >
           <h5
             id="cloud-migration"
             class="body-1 mb-4 font-weight-light"
           >
             Remove cloud barriers
           </h5>
-          <h3 class="display-1 font-weight-medium mb-6">
+          <h3
+            :class="$vuetify.breakpoint.mdAndUp
+              ? 'display-1'
+              : 'headline'
+            "
+            class="font-weight-medium mb-6"
+          >
             Simplify migration to the cloud
           </h3>
-          <p class="title font-weight-regular mb-6">
+          <p
+            :class="$vuetify.breakpoint.mdAndUp
+              ? 'title'
+              : 'subtitle-3'
+            "
+            class="font-weight-regular mb-6"
+          >
             Unfortunately, most applications were not built to be
             <a
               href="https://12factor.net/"
@@ -39,7 +55,7 @@
             Clustered let you migrate your existing apps with minimal
             effort so you can take full advantage of the cloud.
           </p>
-          <ul class="simple-list">
+          <ul class="simple-list text-left">
             <li
               v-for="(item, i) in items"
               :key="i"
@@ -51,7 +67,7 @@
               <div v-html="item.content" />
             </li>
           </ul>
-        </div>
+        </v-col>
       </v-row>
     </v-container>
   </v-sheet>
@@ -120,5 +136,11 @@ export default {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 24px;
+}
+
+@media only screen and (max-width: 599px) {
+  .simple-list {
+    padding-left: 0 !important;
+  }
 }
 </style>

@@ -14,10 +14,22 @@
             <h5 class="body-1 mb-4 font-weight-light">
               Adopts to your needs
             </h5>
-            <h3 class="display-1 font-weight-medium mb-6">
+            <h3
+              :class="$vuetify.breakpoint.mdAndUp
+                ? 'display-1'
+                : 'headline'
+              "
+              class="font-weight-medium mb-6"
+            >
               Start small, grow big
             </h3>
-            <p class="title font-weight-regular mb-6">
+            <p
+              :class="$vuetify.breakpoint.mdAndUp
+                ? 'title'
+                : 'subtitle-3'
+              "
+              class="font-weight-regular mb-6"
+            >
               Solo developer or big dev shop? Clustered Cloud helps
               freelancers, startups, agencies and enterprises build better
               apps at any scale regardless of their size and experience.
@@ -117,5 +129,11 @@ export default {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 24px;
+}
+
+@media only screen and (max-width: 599px) {
+  .simple-list {
+    padding-left: 0 !important;
+  }
 }
 </style>

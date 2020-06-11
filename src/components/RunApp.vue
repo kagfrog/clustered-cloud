@@ -128,4 +128,10 @@ export default {
   flex-shrink: 0;
   margin-right: 24px;
 }
+
+@media only screen and (max-width: 599px) {
+  .simple-list {
+    padding-left: 0 !important;
+  }
+}
 </style>

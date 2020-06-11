@@ -88,10 +88,22 @@
             <h5 class="body-1 mb-4 font-weight-light">
               Automate your workflow
             </h5>
-            <h3 class="display-1 font-weight-medium mb-6">
+            <h3
+              :class="$vuetify.breakpoint.mdAndUp
+                ? 'display-1'
+                : 'headline'
+              "
+              class="font-weight-medium mb-6"
+            >
               Ship code faster and more reliably
             </h3>
-            <p class="title font-weight-regular mb-6">
+            <p
+              :class="$vuetify.breakpoint.mdAndUp
+                ? 'title'
+                : 'subtitle-3'
+              "
+              class="font-weight-regular mb-6"
+            >
               The old way of deploying software is <strong>slow</strong>
               and <strong>brittle</strong>.
               Clustered empowers your development workflow with DevOps
@@ -218,5 +230,11 @@ export default {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 24px;
+}
+
+@media only screen and (max-width: 599px) {
+  .simple-list {
+    padding-left: 0 !important;
+  }
 }
 </style>
