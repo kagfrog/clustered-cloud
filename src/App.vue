@@ -362,4 +362,11 @@ input[type="number"]::-webkit-inner-spin-button {
     padding-bottom: 72px;
   }
 }
+
+/* clustered-cloud custom container style */
+@media (min-width: 1904px) {
+  .container:not(.container--fluid) {
+    max-width: 1264px !important;
+  }
+}
 </style>
