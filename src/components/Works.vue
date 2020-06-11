@@ -12,9 +12,15 @@
           xl="10"
         >
           <div class="text-center">
-            <div class="display-2 font-weight-medium mb-6">
+            <h2
+              :class="$vuetify.breakpoint.mdAndUp
+                ? 'display-2'
+                : 'display-1'
+              "
+              class="display-2 font-weight-medium mb-6"
+            >
               How it works
-            </div>
+            </h2>
             <v-tabs
               v-model="tab"
               centered
@@ -47,7 +53,11 @@
                     md="5"
                   >
                     <h3
-                      class="tab-content-headline display-1 font-weight-bold"
+                      :class="$vuetify.breakpoint.mdAndUp
+                        ? 'display-1'
+                        : 'headline'
+                      "
+                      class="tab-content-headline font-weight-bold"
                     >
                       {{ item.header }}
                     </h3>
@@ -71,7 +81,11 @@
                       </v-avatar>
                       <!-- eslint-disable vue/no-v-html -->
                       <p
-                        class="subtitle-3 font-weight-regular mb-6"
+                        :class="$vuetify.breakpoint.mdAndUp
+                          ? 'subtitle-3'
+                          : 'subtitle-1'
+                        "
+                        class="font-weight-regular mb-6"
                         v-html="item.content"
                       />
                       <template v-if="item.tab === 'develop'">
@@ -99,12 +113,24 @@
                         <div class="title mb-1">
                           <strong>Replaces tools such as</strong>
                         </div>
-                        <p class="subtitle-3 font-weight-regular mb-6">
+                        <p
+                          :class="$vuetify.breakpoint.mdAndUp
+                            ? 'subtitle-3'
+                            : 'subtitle-1'
+                          "
+                          class="font-weight-regular mb-6"
+                        >
                           CircleCI, GitLab, Jenkins, Travis CI, Buddy
                         </p>
                       </template>
                       <template v-if="item.tab === 'package'">
-                        <p class="mt-8 subtitle-3 font-weight-regular mb-6">
+                        <p
+                          :class="$vuetify.breakpoint.mdAndUp
+                            ? 'subtitle-3'
+                            : 'subtitle-1'
+                          "
+                          class="mt-8 font-weight-regular mb-6"
+                        >
                           <router-link to="/platform#containers">
                             Learn more about the benefits of containerization
                           </router-link>
@@ -119,7 +145,13 @@
                         <div class="title mb-1">
                           <strong>A superior alternative to</strong>
                         </div>
-                        <p class="subtitle-3 font-weight-regular mb-6">
+                        <p
+                          :class="$vuetify.breakpoint.mdAndUp
+                            ? 'subtitle-3'
+                            : 'subtitle-1'
+                          "
+                          class="font-weight-regular mb-6"
+                        >
                           Bare-metal servers, AWS, Kubernetes, Heroku, Firebase
                         </p>
                       </template>
@@ -127,13 +159,25 @@
                         <div class="title mb-1">
                           <strong>Get built-in features such as</strong>
                         </div>
-                        <p class="subtitle-3 font-weight-regular mb-6">
+                        <p
+                          :class="$vuetify.breakpoint.mdAndUp
+                            ? 'subtitle-3'
+                            : 'subtitle-1'
+                          "
+                          class="font-weight-regular mb-6"
+                        >
                           Revision history, easy rollback,
                           runtime config management
                         </p>
                       </template>
                       <template v-if="item.tab === 'scale'">
-                        <p class="subtitle-3 font-weight-regular mb-6">
+                        <p
+                          :class="$vuetify.breakpoint.mdAndUp
+                            ? 'subtitle-3'
+                            : 'subtitle-1'
+                          "
+                          class="font-weight-regular mb-6"
+                        >
                           Scale each container individually and pay only for
                           what you use for maximum flexibility and cost
                           efficiency.
