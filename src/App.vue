@@ -4,6 +4,7 @@
       v-model="drawer"
       app
       right
+      temporary
       width="100%"
     >
       <drawer-content :menu.sync="drawer" />
