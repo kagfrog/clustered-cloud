@@ -364,6 +364,19 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* clustered-cloud custom container style */
+
+@media (min-width: 960px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1264px) {
+  .container {
+    max-width: 1185px;
+  }
+}
+
 @media (min-width: 1904px) {
   .container:not(.container--fluid) {
     max-width: 1264px !important;
