@@ -1,33 +1,5 @@
 # clustered-cloud
 
-https://clustered.com/
+This is a partial reimplementation of the [Clustered](https://clustered.com/) public site for the purposes of understanding the Vuetify components on which they built their design and practicing my Vue/Vuetify assembly skills. The design and content are copyright Clustered and this labor of love is neither sponsored nor endorsed by Clustered.
 
-## Project setup
-
-```sh
-yarn
-```
-
-### Compiles and hot-reloads for development
-
-```sh
-yarn serve
-```
-
-### Compiles and minifies for staging
-
-```sh
-yarn dev-build
-```
-
-### Compiles and minifies for production
-
-```sh
-yarn build
-```
-
-### Lints and fixes files
-
-```sh
-yarn lint
-```
+I chose this particular site as the focus of my side project in part for the tools the company used to build their site, and in part because the design of the site is so well done. It contains a wide variety of visually-interesting elements and layouts, it's fully responsive, and it just looks so nice.
