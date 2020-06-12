@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.unguku.com/185driver/clustered-cloud"
+    "url": "https://github.com/185driver/clustered-cloud"
   },
   "private": true,
   "scripts": {
@@ -25,16 +25,16 @@
     "roboto-fontface": "*",
     "vue": "^2.6.11",
     "vue-headful": "^2.1.0",
-    "vue-router": "^3.3.2",
+    "vue-router": "^3.3.3",
     "vue-typer": "^1.2.0",
-    "vuetify": "2.2.34"
+    "vuetify": "2.3.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.3.1",
-    "@vue/cli-plugin-eslint": "^4.3.1",
-    "@vue/cli-plugin-pwa": "^4.3.1",
-    "@vue/cli-plugin-router": "^4.3.1",
-    "@vue/cli-service": "^4.3.1",
+    "@vue/cli-plugin-babel": "^4.4.4",
+    "@vue/cli-plugin-eslint": "^4.4.4",
+    "@vue/cli-plugin-pwa": "^4.4.4",
+    "@vue/cli-plugin-router": "^4.4.4",
+    "@vue/cli-service": "^4.4.4",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.0.0",
@@ -44,9 +44,6 @@
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-vuetify": "^2.0.5",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.4.3"
-  },
-  "resolutions": {
-    "caniuse-api/**/caniuse-lite": "^1.0.30001048"
+    "vuetify-loader": "^1.5.0"
   }
 }
