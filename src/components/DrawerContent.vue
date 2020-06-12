@@ -35,11 +35,10 @@
             <template v-slot:activator>
               <v-list-item
                 :to="entry.to"
-                class="pl-0"
+                class="subtitle-3 pl-0"
+                color="primary"
               >
-                <v-list-item-title class="subtitle-3">
-                  {{ entry.title }}
-                </v-list-item-title>
+                {{ entry.title }}
               </v-list-item>
             </template>
             <template v-for="(item, j) in entry.items">
@@ -164,14 +163,26 @@ export default {
 };
 </script>
 
+
 <style scoped>
-/* TODO: Figure this out. I don't know why these are needed,
-but without them, the button stays focused while the drawer is open. */
+/**
+ * TODO: Try to figure this out. I don't know why these are needed,
+ * but without them, the button stays focused while the drawer is open.
+ */
 div >>> .v-btn::before {
   background-color: #ffffff;
 }
 
 div >>> .v-btn:hover::before {
   background-color: rgba(0, 0, 0, 0.54);
+}
+
+/**
+ * TODO: Try to figure this out.
+ * I don't know why this is needed, but without it, the list-item text
+ * won't change to the primary color when the sub-group items are expanded.
+ */
+.v-list-item--active.v-list-item--link .subtitle-3 {
+  color: var(--v-primary-base) !important;
 }
 </style>

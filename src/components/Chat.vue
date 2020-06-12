@@ -8,6 +8,7 @@
     right
     class="mb-2 mr-2"
     color="primary"
+    style="z-index: 10;"
   >
     <v-badge
       content="1"
