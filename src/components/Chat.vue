@@ -3,12 +3,12 @@
     fixed
     bottom
     dark
-    fab
-    large
+    icon
     right
-    class="mb-2 mr-2"
-    color="primary"
+    class="mb-2 mr-2 primary"
+    height="60"
     style="z-index: 10;"
+    width="60"
   >
     <v-badge
       content="1"

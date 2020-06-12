@@ -10,24 +10,14 @@
       <drawer-content :menu.sync="drawer" />
     </v-navigation-drawer>
     <v-app-bar
+      :height="$vuetify.breakpoint.smAndDown ? 64 : 72"
       app
       elevate-on-scroll
       color="#ffffff"
-      height="72"
     >
-      <app-bar-content />
-      <v-btn
-        v-if="$vuetify.breakpoint.smAndDown"
-        icon
-        x-large
-        @click="drawer = !drawer"
-      >
-        <v-icon size="32">
-          {{ icons.mdiMenu }}
-        </v-icon>
-      </v-btn>
+      <app-bar-content :menu.sync="drawer" />
     </v-app-bar>
-    <v-main class="grey lighten-4">
+    <v-content class="grey lighten-4">
       <router-view
         :install-prompt-event.sync="installPromptEvent"
         :show-install-app-item="showInstallAppItem"
@@ -36,7 +26,7 @@
       />
       <v-snackbar
         v-model="snackWithButtons"
-        timeout="-1"
+        :timeout="0"
         bottom
         left
         class="snack"
@@ -57,7 +47,7 @@
           <v-icon>{{ icons.mdiClose }}</v-icon>
         </v-btn>
       </v-snackbar>
-    </v-main>
+    </v-content>
     <footer-trial />
     <footer-nav />
     <chat />
@@ -67,7 +57,7 @@
 <script>
 import format from 'date-fns/format';
 import removeHover from 'remove-hover';
-import { mdiClose, mdiMenu } from '@mdi/js';
+import { mdiClose } from '@mdi/js';
 import AppBarContent from '@/components/AppBarContent';
 import Chat from '@/components/Chat';
 import DrawerContent from '@/components/DrawerContent';
@@ -88,7 +78,7 @@ export default {
   data () {
     return {
       drawer: false,
-      icons: { mdiClose, mdiMenu },
+      icons: { mdiClose },
       installPromptEvent: null,
       isActiveTouchDevice: false,
       refreshing: false,

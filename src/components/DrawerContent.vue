@@ -9,7 +9,10 @@
         height="64"
       >
         <router-link to="/">
-          <v-img :src="require('../../public/img/svg/clustered-mini.svg')" />
+          <v-img
+            :src="require('../../public/img/svg/clustered-mini.svg')"
+            class="ml-1 mb-2"
+          />
         </router-link>
         <v-spacer />
         <v-btn

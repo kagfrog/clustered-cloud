@@ -8,10 +8,10 @@
     <v-container class="text-center">
       <h4
         :class="$vuetify.breakpoint.mdAndUp
-          ? 'display-1'
-          : 'headline'
+          ? 'display-1  mb-6'
+          : 'headline mb-4'
         "
-        class="font-weight-medium mb-6"
+        class="font-weight-medium"
       >
         Free 14-day trial
       </h4>

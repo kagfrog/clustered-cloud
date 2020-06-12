@@ -19,14 +19,20 @@
               class="mb-4 mt-2"
             />
           </router-link>
-          <p class="subtitle-2 light--text hidden-sm-and-down">
+          <p
+            class="subtitle-2 light--text hidden-sm-and-down"
+            style="margin-top: -1px;"
+          >
             The complete end-to-end
             <br>
             DevOps platform
           </p>
         </v-col>
         <v-col class="flex-grow-1 col-md-auto col-12">
-          <v-row class="justify-space-between">
+          <v-row
+            class="justify-space-between"
+            :style="$vuetify.breakpoint.smAndDown ? iconMargin : ''"
+          >
             <v-col class="col-sm-auto col-12">
               <h5 class="body-2 font-weight-bold mb-2">
                 PLATFORM
@@ -168,7 +174,11 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      iconMargin: { marginTop: '-1px' },
+    };
+  },
 };
 </script>
 

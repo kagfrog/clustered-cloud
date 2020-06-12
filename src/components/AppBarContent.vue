@@ -1,10 +1,13 @@
 <template>
   <v-container
+    :class="{'px-0': $vuetify.breakpoint.smAndDown}"
     fluid
     class="d-flex align-center py-0"
   >
     <router-link to="/">
-      <img :src="require('../../public/img/svg/clustered.svg')">
+      <div class="d-flex flex-shrink-0 mb-1">
+        <img :src="require('../../public/img/svg/clustered.svg')">
+      </div>
     </router-link>
     <div class="ml-12 hidden-sm-and-down">
       <v-menu
@@ -98,18 +101,39 @@
         Free Trial
       </v-btn>
     </div>
+    <v-btn
+      v-if="$vuetify.breakpoint.smAndDown"
+      icon
+      x-large
+      class="mr-n1"
+      @click="drawer = !drawer"
+    >
+      <v-icon size="32">
+        {{ icons.mdiMenu }}
+      </v-icon>
+    </v-btn>
   </v-container>
 </template>
 
 <script>
+import { mdiMenu } from '@mdi/js';
 import PlatformMenu from '@/components/PlatformMenu';
 
 export default {
 
   components: { PlatformMenu },
 
+  props: {
+    menu: {
+      type: Boolean,
+      required: true,
+    },
+  },
+
   data () {
     return {
+      drawer: false,
+      icons: { mdiMenu },
       resources: [
         { title: 'Documentation', to: '/docs' },
         { title: 'Help Center', to: '/help' },
@@ -123,6 +147,12 @@ export default {
         { title: 'Enterprise', to: '/solutions/enterprise' },
       ],
     };
+  },
+
+  watch: {
+    drawer (newVal) { this.$emit('update:menu', newVal); },
+
+    menu (newVal) { this.drawer = newVal; },
   },
 };
 </script>

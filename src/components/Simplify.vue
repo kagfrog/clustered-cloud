@@ -50,8 +50,7 @@
               href="https://12factor.net/"
               target="_blank"
             >
-              cloud-ready
-            </a>.
+              cloud-ready</a>.
             Clustered let you migrate your existing apps with minimal
             effort so you can take full advantage of the cloud.
           </p>
@@ -91,7 +90,6 @@ export default {
           content: `
             Create scalable clusters of <strong>stateless and stateful</strong>
             apps by using the built-in, container-native storage volumes
-            toolchain
           `,
         },
         {
