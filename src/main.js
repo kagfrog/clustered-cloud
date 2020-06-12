@@ -1,12 +1,5 @@
 import Vue from 'vue';
-import 'roboto-fontface/css/roboto/sass/roboto-fontface-regular.scss';
-import 'roboto-fontface/css/roboto/sass/roboto-fontface-medium.scss';
-import 'roboto-fontface/css/roboto/sass/roboto-fontface-bold.scss';
-import 'roboto-fontface/css/roboto/sass/roboto-fontface-light.scss';
-import 'roboto-fontface/css/roboto/sass/roboto-fontface-regular-italic.scss';
-import 'roboto-fontface/css/roboto/sass/roboto-fontface-medium-italic.scss';
-import 'roboto-fontface/css/roboto/sass/roboto-fontface-bold-italic.scss';
-import 'roboto-fontface/css/roboto/sass/roboto-fontface-light-italic.scss';
+import 'roboto-fontface/css/roboto/sass/roboto-fontface.scss';
 import vuetify from '@/plugins/vuetify';
 import router from '@/router';
 import '@/registerServiceWorker';
