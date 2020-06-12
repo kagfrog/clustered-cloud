@@ -16,6 +16,6 @@ module.exports = {
       exclude: [/\.eot$/, /\.ttf$/],
     },
   },
-  publicPath: process.env.VUE_APP_BASE_URL,
+  publicPath: '/clustered-cloud/',
   productionSourceMap: false,
 };
