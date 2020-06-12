@@ -2,10 +2,10 @@
   <v-app>
     <v-navigation-drawer
       v-model="drawer"
+      :width="$vuetify.breakpoint.smAndDown ? '100%' : '350'"
       app
       right
       temporary
-      width="100%"
     >
       <drawer-content :menu.sync="drawer" />
     </v-navigation-drawer>
