@@ -13,9 +13,8 @@ module.exports = {
     workboxOptions: {
       swSrc: './src/sw.js',
       swDest: 'service-worker.js',
-      exclude: [/\.eot$/, /\.ttf$/],
     },
   },
-  publicPath: '/clustered-cloud/',
+  publicPath: process.env.VUE_APP_BASE_URL,
   productionSourceMap: false,
 };

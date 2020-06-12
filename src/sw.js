@@ -19,7 +19,7 @@ self.addEventListener('message', (e) => {
 workbox.precaching.cleanupOutdatedCaches();
 
 // Prefixes the cache name in the Dev Tools Cache Storage viewer.
-workbox.core.setCacheNameDetails({ prefix: 'sof-vue' });
+workbox.core.setCacheNameDetails({ prefix: 'clustered-cloud' });
 
 // Throws promise error in dev tools console if placed inside switch() above
 // as 'self.clients.claim()'. Works quite nicely here, however.
