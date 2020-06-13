@@ -12,6 +12,7 @@
         >
           <v-timeline>
             <v-timeline-item
+              v-intersect.once.quiet="onIntersect"
               fill-dot
               large
               class="mb-12"
@@ -36,9 +37,10 @@
               </v-card>
             </v-timeline-item>
             <v-timeline-item
+              ref="step2"
               fill-dot
               large
-              class="mb-12"
+              class="mb-12 process-step"
               color="#ffffff"
             >
               <template v-slot:icon>
@@ -56,12 +58,20 @@
               </v-card>
             </v-timeline-item>
             <v-timeline-item
+              ref="step3"
               fill-dot
               large
+              class="process-step"
               color="#ffffff"
             >
               <template v-slot:icon>
+                <v-progress-circular
+                  v-if="loading"
+                  indeterminate
+                  color="primary"
+                />
                 <v-icon
+                  v-else
                   color="accent"
                   size="36"
                 >
@@ -180,6 +190,7 @@ export default {
           `,
         },
       ],
+      loading: false,
       svgs: [
         GOLANG,
         HTML5,
@@ -202,6 +213,19 @@ export default {
       this.index = this.index === this.svgs.length - 1 ? 0 : this.index += 1;
       this.imgInUse = this.svgs[this.index];
     }, 5000);
+  },
+
+  methods: {
+    onIntersect () {
+      this.loading = true;
+      setTimeout(() => {
+        this.$refs.step2.$el.classList.add('process-step--visible');
+      }, 1000);
+      setTimeout(() => {
+        this.$refs.step3.$el.classList.add('process-step--visible');
+      }, 2000);
+      setTimeout(() => { this.loading = false; }, 5000);
+    },
   },
 };
 </script>
@@ -236,5 +260,14 @@ export default {
   .simple-list {
     padding-left: 0 !important;
   }
+}
+
+.process-step {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.process-step--visible {
+  opacity: 1;
 }
 </style>

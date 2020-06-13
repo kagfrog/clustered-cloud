@@ -168,4 +168,7 @@ export default new VueRouter({
       component: Contact,
     },
   ],
+  scrollBehavior () {
+    return { x: 0, y: 0 };
+  },
 });
