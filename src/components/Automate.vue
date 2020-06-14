@@ -218,12 +218,15 @@ export default {
   methods: {
     onIntersect () {
       this.loading = true;
+
       setTimeout(() => {
         this.$refs.step2.$el.classList.add('process-step--visible');
       }, 1000);
+
       setTimeout(() => {
         this.$refs.step3.$el.classList.add('process-step--visible');
       }, 2000);
+
       setTimeout(() => { this.loading = false; }, 5000);
     },
   },
