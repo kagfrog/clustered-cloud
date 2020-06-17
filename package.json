@@ -25,9 +25,9 @@
     "roboto-fontface": "*",
     "vue": "^2.6.11",
     "vue-headful": "^2.1.0",
-    "vue-router": "^3.3.3",
+    "vue-router": "^3.3.4",
     "vue-typer": "^1.2.0",
-    "vuetify": "2.2.34"
+    "vuetify": "2.3.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.4",

@@ -8644,10 +8644,10 @@ vue-loader@^15.9.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-router@^3.3.3:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.3.3.tgz#92603966921f3f0c7e9ff3881cf0b7ab311533df"
-  integrity sha512-Qmzkurgmy9Muy8HItNQcMYAeANHi/NY4ppOJ/qhTWtrg4mFan+VLX+LEv5DqoYOX1XEabN3m3lLPOEEgUpRr0A==
+vue-router@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.3.4.tgz#4e38abc34a11c41b6c3d8244449a2e363ba6250b"
+  integrity sha512-SdKRBeoXUjaZ9R/8AyxsdTqkOfMcI5tWxPZOUX5Ie1BTL5rPSZ0O++pbiZCeYeythiZIdLEfkDiQPKIaWk5hDg==
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
@@ -8690,10 +8690,10 @@ vuetify-loader@^1.5.0:
     file-loader "^4.0.0"
     loader-utils "^1.2.0"
 
-vuetify@2.2.34:
-  version "2.2.34"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.2.34.tgz#070458a9424a4aa48ca5769cd8837265c90766c3"
-  integrity sha512-YE2gMGs2QvY/HsnVfUtYGoA6Nq7Pt6W7MuToJgSNMFmSHvCcjApZW39mebGKfVY2llLDbmrnL8d2AvOmUk8hcg==
+vuetify@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.3.1.tgz#8c5bdcb15ad7ca9ba2a206a26a65b34ec0ca6c0d"
+  integrity sha512-UdWcoM3MzTD/+o/uH745i5EyK8CluAEQclB41iegHQZmklQQMyBPrIF6BcED9rjV9iFjqeUaIh616T5NqoYr+Q==
 
 watchpack@^1.6.1:
   version "1.6.1"

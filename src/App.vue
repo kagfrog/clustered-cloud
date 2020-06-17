@@ -17,7 +17,7 @@
     >
       <app-bar-content :menu.sync="drawer" />
     </v-app-bar>
-    <v-content class="grey lighten-4">
+    <v-main class="grey lighten-4">
       <router-view
         :install-prompt-event.sync="installPromptEvent"
         :show-install-app-item="showInstallAppItem"
@@ -26,7 +26,7 @@
       />
       <v-snackbar
         v-model="snackWithButtons"
-        :timeout="0"
+        timeout="-1"
         bottom
         left
         class="snack"
@@ -47,7 +47,7 @@
           <v-icon>{{ icons.mdiClose }}</v-icon>
         </v-btn>
       </v-snackbar>
-    </v-content>
+    </v-main>
     <footer-trial />
     <footer-nav />
     <chat />
