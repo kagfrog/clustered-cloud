@@ -23,7 +23,7 @@
     "register-service-worker": "^1.7.1",
     "remove-hover": "^0.1.0",
     "roboto-fontface": "*",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-headful": "^2.1.0",
     "vue-router": "^3.3.4",
     "vue-typer": "^1.2.0",
@@ -43,7 +43,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-vuetify": "^2.0.5",
-    "vue-template-compiler": "^2.6.11",
+    "vue-template-compiler": "^2.6.12",
     "vuetify-loader": "^1.5.0"
   }
 }
